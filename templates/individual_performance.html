@@ -5,7 +5,7 @@
     <title>Mechanical Students' Dashboard</title>
 
 
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+     <script src="https://cdn.plot.ly/plotly-3.0.0.min.js" charset="utf-8"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -86,15 +86,14 @@
 
 
         $(document).ready(function () {
-            // Initialize select2 on the element
+            
             $('#student-select').select2();
 
-            // Get the selected value right after initialization
+           
             var selectedValue = $('#student-select').val();
 
             updateGraphs(selectedValue)
 
-            // Listen for changes in selection
             $('#student-select').on('change', function () {
                 var newValue = $(this).val();
                 console.log("Newly selected value:", newValue);
